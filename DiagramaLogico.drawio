@@ -1,9 +1,27 @@
-<mxfile host="app.diagrams.net" modified="2024-02-23T20:16:03.731Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" version="23.1.6" etag="dyTt-4Qod0J9XRIzPpp7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-23T20:27:03.207Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="XxDSRUq5JnXsWdMWGo1f" version="23.1.6" type="github">
   <diagram name="Página-1" id="WDznmtDyIMhgdQ0o0XYi">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="c4z458BnOylWiohKNyHq-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;rate(room_type, occupancy, amount)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4z458BnOylWiohKNyHq-2" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;room(id, room_type, max_occupancy)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="570" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4z458BnOylWiohKNyHq-3" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;room_type(id, description)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4z458BnOylWiohKNyHq-5" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;extra(extra_id, booking_id, description, amount)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4z458BnOylWiohKNyHq-6" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;booking(booking_id, booking_date, room_no, guest_id, occupants, room_type_requesed, nights, arrival_time)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="290" width="990" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="c4z458BnOylWiohKNyHq-7" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;guest(id,first_name, last_name, address)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="490" width="380" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
