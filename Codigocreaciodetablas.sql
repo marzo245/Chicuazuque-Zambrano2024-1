@@ -112,6 +112,10 @@ CREATE TABLE Clasificacion(
     ligaNombre varchar(30) not null,
     ligaFecha date not null,
     equipo varchar(30) not null,
+    puesto int NOT NULL,
+    partidosGanados int not null,
+    partidosEmpatados int not null,
+    partidosPerdidos int not null,
     puntos int not null
 );
 
@@ -120,6 +124,7 @@ CREATE TABLE Estadisticas(
     partidoCodigo int not null,
     jugadorNit varchar(10),
     jugadorTid varchar(20),
+    equipo varchar(30) not null,
     asistencias int not null,
     tarjetasAmarillas int not null,
     tarjetasRojas int not null,
