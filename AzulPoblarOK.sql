@@ -48,30 +48,28 @@ INSERT INTO Liga (nombre, fechaInicio, fechaFin, ganador) VALUES ('Liga1', TO_DA
 INSERT INTO Liga (nombre, fechaInicio, fechaFin, ganador) VALUES ('Liga2', TO_DATE('2025-01-01','YYYY-MM-DD'), TO_DATE('2025-01-25','YYYY-MM-DD'), 'Equipo2');
 
 -- Inserts para la tabla Partido
--- Insertar datos en la tabla Partido
 INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante) 
-VALUES (3, 'Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo1', 'Equipo2', 2, 1);
+VALUES (1, 'Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo1', 'Equipo2', 3, 0);
 
 INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante) 
-VALUES (4, 'Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo2', 'Equipo1', 1, 3);
-
+VALUES (2, 'Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo2', 'Equipo1', 2, 2);
 -- Agrega más inserciones según sea necesario
 
 
 -- Agrega más inserciones según sea necesario
 
 -- Inserts para la tabla Clasificacion
-INSERT INTO Clasificacion (ligaNombre, ligaFecha, equipo, puesto, partidosGanados, partidosEmpatados, partidosPerdidos, puntos) VALUES ('Liga1', '2023-01-01', 'Equipo1', 1, 20, 5, 3, 65);
-INSERT INTO Clasificacion (ligaNombre, ligaFecha, equipo, puesto, partidosGanados, partidosEmpatados, partidosPerdidos, puntos) VALUES ('Liga2', '2023-01-01', 'Equipo2', 1, 18, 7, 3, 61);
+INSERT INTO Clasificacion (ligaNombre, ligaFecha, equipo, puesto, partidosGanados, partidosEmpatados, partidosPerdidos, puntos) VALUES ('Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo1', 1, 20, 5, 3, 65);
+INSERT INTO Clasificacion (ligaNombre, ligaFecha, equipo, puesto, partidosGanados, partidosEmpatados, partidosPerdidos, puntos) VALUES ('Liga1', TO_DATE('2025-01-01', 'YYYY-MM-DD'), 'Equipo2', 1, 18, 7, 3, 61);
 -- Agrega más inserciones según sea necesario
 
 -- Inserts para la tabla Estadisticas
-INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) VALUES (1, 'Nit1', 'Tid1', 'Equipo1', 2, 1, 0, 60.5, 39.5);
-INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) VALUES (2, 'Nit2', 'Tid2', 'Equipo2', 1, 2, 0, 48.2, 51.8);
+--INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) VALUES (1, '123456','C.C', 'Equipo1', 2, 1, 0, 60.5, 39.5);
+--INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) VALUES (2, '123457','C.C', 'Equipo2', 1, 2, 0, 48.2, 51.8);
 -- Agrega más inserciones según sea necesario
 -- Inserts para la tabla Essujugadorfavorito
-INSERT INTO Essujugadorfavorito (pago, jugadornit, jugadortid) VALUES ('correo1@example.com', 'Nit1', 'Tid1');
-INSERT INTO Essujugadorfavorito (pago, jugadornit, jugadortid) VALUES ('correo2@example.com', 'Nit2', 'Tid2');
+INSERT INTO Essujugadorfavorito (pago, jugadornit, jugadortid) VALUES ('correo1@example.com', '123456','C.C');
+INSERT INTO Essujugadorfavorito (pago, jugadornit, jugadortid) VALUES ('correo2@example.com', '123456','C.C');
 -- Agrega más inserciones según sea necesario
 
 -- Inserts para la tabla Essuequipofavorito
