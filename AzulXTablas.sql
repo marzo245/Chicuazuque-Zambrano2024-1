@@ -1,5 +1,3 @@
-----Estructura y Restricciones Declarativas
---XTablas. Eliminación de tablas
 DROP TABLE IF EXISTS Sesion;
 DROP TABLE IF EXISTS Gratis;
 DROP TABLE IF EXISTS Publicidad;
