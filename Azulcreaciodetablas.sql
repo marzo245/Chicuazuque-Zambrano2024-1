@@ -66,7 +66,7 @@ CREATE TABLE Jugador(
 --Pertenece 
 CREATE TABLE Pertenece(
     jugadorNit varchar(10) not null,
-    jugadorTit varchar(20) not null,
+    jugadorTid varchar(20) not null,
     equipo varchar(30) not null
 );
 
@@ -91,7 +91,7 @@ CREATE TABLE CuerpoTecnico(
 --Partido
 CREATE TABLE Partido(
     codigo int not null,
-    ligaNombre int not null,
+    ligaNombre varchar(30) not null,
     ligaFecha date not null,
     equipoLocal varchar(30)   not null,
     equipoVisitante varchar(30) not null,

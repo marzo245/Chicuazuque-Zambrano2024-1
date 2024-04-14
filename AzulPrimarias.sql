@@ -44,9 +44,9 @@ ALTER TABLE Partido ADD PRIMARY KEY (codigo);
 ALTER TABLE Liga ADD PRIMARY KEY (nombre,fechaInicio);
 
 --Clasificacion
-ALTER TABLE Clasificacion ADD PRIMARY KEY (equipo,nombreLiga,fechaInicio);
+ALTER TABLE Clasificacion ADD PRIMARY KEY (equipo,Liganombre,ligafecha);
 
 --Estadisticas
-ALTER TABLE Estadisticas ADD PRIMARY KEY (codigoPartido);
+ALTER TABLE Estadisticas ADD PRIMARY KEY (partidocodigo);
 
 

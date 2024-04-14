@@ -23,8 +23,7 @@ ALTER TABLE Tarjeta ADD CONSTRAINT FK_Tarjeta_Pago FOREIGN KEY (pago) REFERENCES
 
 --Es su jugador favorito
 ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_Pago FOREIGN KEY (pago) REFERENCES Pago(sesion);
-ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_JugadorT FOREIGN KEY (jugadornit) REFERENCES Jugador(nit);
-ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_JugadorN FOREIGN KEY (jugadortid) REFERENCES Jugador(tid);
+ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_JugadorT FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
 
 --Es su equipo favorito
 ALTER TABLE Essuequipofavorito ADD CONSTRAINT FK_Essuequipofavorito_Pago FOREIGN KEY (pago) REFERENCES Pago(sesion);
@@ -35,8 +34,9 @@ ALTER TABLE Essuequipofavorito ADD CONSTRAINT FK_Essuequipofavorito_Equipo FOREI
 
 --Pertenece
 ALTER TABLE Pertenece ADD CONSTRAINT FK_Pertenece_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
-ALTER TABLE Pertenece ADD CONSTRAINT FK_Pertenece_JugadorN FOREIGN KEY (jugadorNit) REFERENCES Jugador(nit);
-ALTER TABLE Perteneces ADD CONSTRAINT FK_Pertenece_JugadorT FOREIGN KEY (jugadorTid) REFERENCES Jugador(tid);
+ALTER TABLE Pertenece ADD CONSTRAINT FK_Pertenece_JugadorN FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
+
+
 
 --Equipo
 --No hay claves foraneas
@@ -47,19 +47,17 @@ ALTER TABLE CuerpoTecnico ADD CONSTRAINT FK_CuerpoTecnico_Equipo FOREIGN KEY (eq
 --Partido
 ALTER TABLE Partido ADD CONSTRAINT FK_Partido_EquipoL FOREIGN KEY (equipoLocal) REFERENCES Equipo(nombre);
 ALTER TABLE Partido ADD CONSTRAINT FK_Partido_EquipoV FOREIGN KEY (equipoVisitante) REFERENCES Equipo(nombre);
-ALTER TABLE Partido ADD CONSTRAINT FK_Partido_LigaNombre FOREIGN KEY (ligaNombre) REFERENCES Liga(nombre);
-ALTER TABLE Partido ADD CONSTRAINT FK_Partido_ligaFecha FOREIGN KEY (ligaFecha) REFERENCES Liga(fechaIncial);
+ALTER TABLE Partido ADD CONSTRAINT FK_Partido_LigaNombre FOREIGN KEY (ligaNombre,ligaFecha) REFERENCES Liga(nombre,fechaInicio);
 
 --Liga
 ALTER TABLE Liga ADD CONSTRAINT FK_Liga_EquipoG FOREIGN KEY (ganador) REFERENCES Equipo(nombre);
 
 --Clasificacion
 ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
-ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_LigaNombre FOREIGN KEY (ligaNombre) REFERENCES Liga(nombre);
-ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_LigaFecha FOREIGN KEY (ligaFecha) REFERENCES Liga(fechaIncial);
+ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_LigaNombre FOREIGN KEY (ligaNombre,ligaFecha) REFERENCES Liga(nombre,fechaInicio);
+
 
 --Estadisticas
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_JugadorN FOREIGN KEY (jugadorNit) REFERENCES Jugador(nit);
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_JugadorT FOREIGN KEY (jugadorTid) REFERENCES Jugador(tid);
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Partido FOREIGN KEY (partido) REFERENCES Partido(id);
+ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_JugadorN FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
+ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Partido FOREIGN KEY (partido) REFERENCES Partido(codigo);
 ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
