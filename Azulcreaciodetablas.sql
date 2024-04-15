@@ -40,6 +40,7 @@ CREATE TABLE Tarjeta(
     fechaVencimiento date not null,
     cvv int not null
 );
+
 --Es su jugador favorito
 CREATE TABLE Essujugadorfavorito(
     pago varchar(60) not null,

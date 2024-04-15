@@ -13,3 +13,4 @@ DROP TABLE  Partido;
 DROP TABLE  Liga;
 DROP TABLE  Clasificacion;
 DROP TABLE  Estadisticas;
+DROP TABLE TARJETA;
