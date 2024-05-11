@@ -8,10 +8,8 @@ CREATE TRIGGER before_insert_Sesion
 BEFORE INSERT ON Sesion
 FOR EACH ROW
 BEGIN
-    -- Acciones antes de insertar en la tabla Sesion
-    -- Por ejemplo, validar que el correo no esté duplicado
-    IF EXISTS (SELECT 1 FROM Sesion WHERE correo = NEW.correo) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'El correo ya existe en la tabla Sesion';
+    IF ADD_MONTHS(:NEW.fechaNacimineto, 12 * 16) > SYSDATE THEN
+        raise_application_error(-20002, 'La persona debe tener al menos 16 años para registrarse');
     END IF;
 END;
 
@@ -19,19 +17,25 @@ CREATE TRIGGER before_delete_Sesion
 BEFORE DELETE ON Sesion
 FOR EACH ROW
 BEGIN
-    -- Acciones antes de eliminar un registro de Sesion
-    -- Por ejemplo, verificar si el registro a eliminar está siendo referenciado por otras tablas
-    -- Si hay restricciones de clave externa, la eliminación puede requerir consideraciones adicionales
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Un usuario una vez registrado no puede ser eliminado';
 END;
 
 CREATE TRIGGER before_update_Sesion
 BEFORE UPDATE ON Sesion
 FOR EACH ROW
 BEGIN
-    -- Acciones antes de actualizar un registro de Sesion
-    -- Por ejemplo, asegurarse de que el correo no se esté cambiando a uno ya existente
-    IF EXISTS (SELECT 1 FROM Sesion WHERE correo = NEW.correo AND correo != OLD.correo) THEN
-        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'No se puede cambiar el correo a uno ya existente';
+    IF :OLD.nombre != :NEW.nombre OR :OLD.correo != :NEW.correo OR :OLD.fechaNacimineto != :NEW.fechaNacimineto THEN
+        raise_application_error(-20003, 'Solo se pueden cambiar el nombre, correo y fecha de nacimiento');
+    END IF;
+    
+    -- Verificar que el correo no se esté cambiando a uno ya existente
+    IF :NEW.correo IN (SELECT correo FROM Sesion WHERE correo != :OLD.correo) THEN
+        raise_application_error(-20004, 'No se puede cambiar el correo a uno ya existente');
+    END IF;
+
+    -- Verificar que la fecha de nacimiento sea mayor a 16 años al actualizar
+    IF ADD_MONTHS(:NEW.fechaNacimineto, 12 * 16) > SYSDATE THEN
+        raise_application_error(-20005, 'La persona debe tener al menos 16 años para registrarse');
     END IF;
 END;
 
