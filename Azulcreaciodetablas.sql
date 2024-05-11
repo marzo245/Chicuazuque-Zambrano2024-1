@@ -56,7 +56,7 @@ CREATE TABLE Essuequipofavorito(
 
 --Jugador
 CREATE TABLE Jugador(
-    nombre varchar(50) ,
+    nombre varchar(50) not null,
     nit varchar(10) not null,
     tid varchar(20)not null,
     nacionalidad varchar(20) not null,
