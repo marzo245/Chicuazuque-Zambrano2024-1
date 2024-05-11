@@ -35,8 +35,7 @@ CREATE TABLE Pago(
 );
 --Tarjeta
 CREATE TABLE Tarjeta(
-    pago varchar(60) not null,
-    numero varchar(16) not null,
+    numero int not null,
     fechaVencimiento date not null,
     cvv int not null
 );
@@ -45,7 +44,7 @@ CREATE TABLE Tarjeta(
 CREATE TABLE Essujugadorfavorito(
     pago varchar(60) not null,
     jugadornit varchar(10) not null,
-    jugadortid varchar(20) not null
+    jugadortid char(3)not null
 );
 
 --Es su equipo favorito
@@ -58,7 +57,7 @@ CREATE TABLE Essuequipofavorito(
 CREATE TABLE Jugador(
     nombre varchar(50) not null,
     nit varchar(10) not null,
-    tid varchar(20)not null,
+    tid char(3)not null,
     nacionalidad varchar(20) not null,
     edad int not null,
     altura float not null,
@@ -67,7 +66,7 @@ CREATE TABLE Jugador(
 --Pertenece 
 CREATE TABLE Pertenece(
     jugadorNit varchar(10) not null,
-    jugadorTid varchar(20) not null,
+    jugadorTid char(3)not null,
     equipo varchar(30) not null
 );
 
@@ -82,7 +81,7 @@ CREATE TABLE Equipo(
 --Cuerpo Tecnico
 CREATE TABLE CuerpoTecnico(
     nombre varchar(50) not null,
-    tid varchar(10) not null,
+    tid char(3)not null,
     nid VARCHAR(20) not null,
     nacionalidad varchar(20) not null,
     cargo varchar(20) not null,
@@ -124,7 +123,7 @@ CREATE TABLE Clasificacion(
 CREATE TABLE Estadisticas(
     partidoCodigo int not null,
     jugadorNit varchar(10),
-    jugadorTid varchar(20),
+    jugadorTid char(3),
     equipo varchar(30) not null,
     asistencias int not null,
     tarjetasAmarillas int not null,
