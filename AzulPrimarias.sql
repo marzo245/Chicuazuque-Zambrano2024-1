@@ -29,7 +29,7 @@ ALTER TABLE Essuequipofavorito ADD PRIMARY KEY (pago,equipo);
 ALTER TABLE Jugador ADD PRIMARY KEY (nit,tid);
 
 --Pertenece
-ALTER TABLE Pertenece ADD PRIMARY KEY (jugadornit,equipo);
+ALTER TABLE Pertenece ADD PRIMARY KEY (jugadorNit,jugadorTid,equipo,fechaInicio,fechaFin);
 
 --Equipo
 ALTER TABLE Equipo ADD PRIMARY KEY (nombre);

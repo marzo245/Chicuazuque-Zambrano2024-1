@@ -37,7 +37,8 @@ CREATE TABLE Pago(
 CREATE TABLE Tarjeta(
     numero int not null,
     fechaVencimiento date not null,
-    cvv int not null
+    cvv int not null,
+    pago VARCHAR(60) not null
 );
 
 --Es su jugador favorito
@@ -67,14 +68,16 @@ CREATE TABLE Jugador(
 CREATE TABLE Pertenece(
     jugadorNit varchar(10) not null,
     jugadorTid char(3)not null,
-    equipo varchar(30) not null
+    equipo varchar(30) not null,
+    fechaInicio date not null,
+    fechaFin date not null
 );
 
 --Equipo
 CREATE TABLE Equipo(
     nombre varchar(30) not null,
     ciudad varchar(20) not null,
-    estadio varchar(30) not null,
+    estadio varchar(30),
     dueño varchar(20) not null
 );
 
