@@ -59,5 +59,5 @@ ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_LigaNombre FOREIGN KEY
 
 --Estadisticas
 ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_JugadorN FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Partido FOREIGN KEY (partido) REFERENCES Partido(codigo);
+ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Partido FOREIGN KEY (partidocodigo) REFERENCES Partido(codigo);
 ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
