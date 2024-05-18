@@ -3,6 +3,18 @@ INSERT INTO Sesion (correo, nombre, fechaNacimineto) VALUES ('correo1@example.co
 INSERT INTO Sesion (correo, nombre, fechaNacimineto) VALUES ('correo2@example.com', 'Nombre2', TO_DATE('1995-05-15','YYYY-MM-DD'));
 -- Agrega más inserciones según sea necesario
 
+--Inserts para la tabla Publicidad
+
+INSERT INTO Publicidad (nombre, URL) 
+VALUES ('Publicidad 1', XMLTYPE('<url>http://example.com</url>'));
+
+INSERT INTO Publicidad (nombre, URL) 
+VALUES ('Publicidad 2', XMLTYPE('<url>https://example.com</url>'));
+
+INSERT INTO Publicidad (nombre, URL) 
+VALUES ('Publicidad 3', XMLTYPE('<url>www.example.com</url>'));
+
+
 -- Inserts para la tabla Gratis
 INSERT INTO Gratis (sesion) VALUES ('correo1@example.com');
 INSERT INTO Gratis (sesion) VALUES ('correo2@example.com');
