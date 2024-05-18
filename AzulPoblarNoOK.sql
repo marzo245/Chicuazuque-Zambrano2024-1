@@ -4,6 +4,10 @@ INSERT INTO Gratis (sesion) VALUES ('correo_no_existente@example.com');
 -- Intento de insertar una publicidad con un nombre que ya existe en la tabla Publicidad (violación de la restricción UNIQUE)
 INSERT INTO Publicidad (nombre, URL) VALUES ('Publicidad1', 'http://www.nueva-publicidad.com');
 
+-- Intento de insertar una publicidad tal que: URL que no comienza con 'http://', 'https://', o 'www.'
+INSERT INTO Publicidad (nombre, URL) 
+VALUES ('Inserción Errónea', XMLTYPE('<url>ftp://example.com</url>'));
+
 -- Intento de insertar una relación en la tabla Ve con una referencia a una publicidad que no existe en la tabla Publicidad
 INSERT INTO Ve (publicidad, gratis) VALUES ('Publicidad_no_existente', 'correo1@example.com');
 
