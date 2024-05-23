@@ -26,12 +26,15 @@ DROP TRIGGER before_delete_Equipo;
 DROP TRIGGER before_update_Equipo;
 
 -- Trigger para la tabla Partido
-DROP TRIGGER before_insert_Partido;
+
 DROP TRIGGER before_delete_Partido;
-DROP TRIGGER before_update_Partido;
+
 
 -- Trigger para la tabla Liga
 DROP TRIGGER before_insert_Liga;
 DROP TRIGGER before_delete_Liga;
 DROP TRIGGER before_update_Liga;
 
+-- Trigger para la tabla clasificacion
+DROP TRIGGER TR_after_insert_partido;
+DROP TRIGGER TR_before_update_partido;
