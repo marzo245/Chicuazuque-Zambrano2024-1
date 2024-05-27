@@ -1,6 +1,6 @@
 ALTER TABLE Pago
 ADD CONSTRAINT CK_Pago_FechaInicio_FechaFin
-CHECK(fechaFin>fechaIncio);
+CHECK(fechaFin>fechaInicio);
 
 ALTER TABLE Liga
 ADD CONSTRAINT CK_Liga_FechaInicio_FechaFin

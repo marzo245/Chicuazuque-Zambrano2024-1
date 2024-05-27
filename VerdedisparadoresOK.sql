@@ -41,3 +41,4 @@ INSERT INTO Liga (nombre, fechaInicio, fechaFin) VALUES ('Liga 1', TO_DATE('2026
 INSERT INTO Equipo (nombre, ciudad, estadio, dueño) VALUES ('EquipoTemporal2', 'Ciudad12', 'Estadio1a', 'Dueño1a');
 INSERT INTO Partido ( equipoLocal, equipoVisitante, golesLocal, golesVisitante, ligaNombre, ligaFecha) VALUES ( 'EquipoTemporal2', 'EquipoTemporal', 2, 1, 'Liga 1', TO_DATE('2026-01-01', 'YYYY-MM-DD'));
 select * from partido;
+select * from clasificacion;
