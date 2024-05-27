@@ -1,6 +1,10 @@
 ----Estructura y Restricciones Declarativas
 --Atributos. Definición de restricciones para un único atributos (TIpos)
-
+--Aviso PARA PARCIAL
+ALTER TABLE Aviso ADD CONSTRAINT CK_Aviso_TipoDeAviso CHECK(tipoDeAviso in('Notificación','alerta'));
+ALTER TABLE Aviso ADD CONSTRAINT CK_Aviso_TestadoMensaje CHECK(mensajeEstado in('enviada', 'pendiente', 'fallida'));
+ALTER TABLE Aviso ADD CONSTRAINT CK_Aviso_TestadoAlerta CHECK(estadoAlerta in('Activas', 'Inactivas'));
+ALTER TABLE Aviso ADD CONSTRAINT CK_Aviso_UsuarioDestin CHECK(usuarioDestinatario in('Administrador del negocio','dueño de la información'));
 --Sesion
 ALTER TABLE Sesion ADD CONSTRAINT CK_Sesion_Tcorreo CHECK(Correo LIKE '%@%' AND Correo LIKE '%.%' AND Correo NOT LIKE '%@%.' AND Correo NOT LIKE '%.@%' AND Correo NOT LIKE '%..%');
 

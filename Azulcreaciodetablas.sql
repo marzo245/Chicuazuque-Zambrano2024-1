@@ -2,12 +2,24 @@
 
 --Tablas
 --Creación de tablas
+--Aviso
+CREATE TABLE Aviso(
+    id char(9) not null,
+    tipoDeAviso varchar(13) not null,
+    fechaCreacion date not null,
+    mensajeEstado varchar(9) not null,
+    usuarioDestinatario varchar(30) not null,
+    datosMasImportantes XMLTYPE,
+    estadoAlerta varchar(9),
+    horaEjecuto date,
+    sesion varchar(60) not null
+);
 
 --Sesion
 CREATE TABLE Sesion(
     correo varchar(60) not null,
     nombre VARCHAR(20) not null,
-    fechaNacimineto date not NULL
+    fechaNacimiento date not NULL
 );
 
 --Gratis
@@ -30,7 +42,7 @@ CREATE TABLE Ve(
 --Pago
 CREATE TABLE Pago(
     sesion varchar(60) not null,
-    fechaIncio date not null,
+    fechaInicio date not null,
     fechaFin date not null
 );
 --Tarjeta

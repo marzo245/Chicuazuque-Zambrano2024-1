@@ -1,6 +1,7 @@
 ----Estructura y Restricciones Declarativas
 --Primarias. Definición de claves primarias
-
+--Aviso
+ALTER TABLE Aviso ADD PRIMARY KEY(id);
 --Sesion
 ALTER TABLE Sesion ADD PRIMARY KEY (correo);
 

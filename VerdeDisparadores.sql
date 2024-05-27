@@ -1,3 +1,50 @@
+-- Trigers para la base de datos de Verde
+--TRIGGERS PARA LA TABLA AVISO
+CREATE OR REPLACE TRIGGER after_insert_Sesion_Aviso
+AFTER INSERT ON Sesion
+FOR EACH ROW
+DECLARE
+    numerosecuencia char(9);
+BEGIN
+    -- Generar un nuevo ID único para el aviso de inserción
+    numerosecuencia := 'I' || DBMS_RANDOM.STRING('X', 8);
+
+    INSERT INTO Aviso (
+        id, tipoDeAviso, fechaCreacion, mensajeEstado, usuarioDestinatario, sesion, datosMasImportantes, estadoAlerta, horaEjecuto
+    ) VALUES (
+        numerosecuencia, 'Notificación', SYSDATE, 'pendiente', 'Administrador del negocio', :NEW.correo, NULL, NULL, NULL
+    );
+END;
+/
+
+CREATE OR REPLACE TRIGGER before_delete_Sesion_Aviso
+BEFORE DELETE ON Sesion
+FOR EACH ROW
+DECLARE
+    numerosecuencia char(9);
+BEGIN
+    -- Generar un nuevo ID único para el aviso de eliminación
+    numerosecuencia := 'E' || DBMS_RANDOM.STRING('X', 8);
+
+    INSERT INTO Aviso (
+        id, tipoDeAviso, fechaCreacion, mensajeEstado, usuarioDestinatario, sesion, datosMasImportantes, estadoAlerta, horaEjecuto
+    ) VALUES (
+        numerosecuencia, 'Notificación', SYSDATE, 'pendiente', 'Administrador del negocio', :OLD.correo,
+        XMLType('<sesion>' || :OLD.correo || '<nombre>' || :OLD.nombre || '</nombre></sesion>'), 'Activas', SYSDATE
+    );
+END;
+/
+CREATE OR REPLACE TRIGGER prevent_delete_alerts
+BEFORE DELETE ON Aviso
+FOR EACH ROW
+BEGIN
+    IF :OLD.tipoDeAviso = 'Alerta' THEN
+        RAISE_APPLICATION_ERROR(-20001, 'No se pueden eliminar avisos de tipo Alerta.');
+    END IF;
+END;
+/
+
+-- Trigger para la tabla Sesion
 CREATE OR REPLACE TRIGGER before_insert_Sesion
 BEFORE INSERT ON Sesion
 FOR EACH ROW
@@ -7,6 +54,7 @@ BEGIN
     END IF;
 END;
 /
+
 create or replace trigger before_delete_Sesion
 BEFORE DELETE ON Sesion
 FOR EACH ROW

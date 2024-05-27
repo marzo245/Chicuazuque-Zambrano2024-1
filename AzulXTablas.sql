@@ -1,3 +1,4 @@
+DROP TABLE Aviso;
 DROP TABLE  Sesion;
 DROP TABLE  Gratis;
 DROP TABLE  Publicidad;

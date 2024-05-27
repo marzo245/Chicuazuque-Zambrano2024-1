@@ -1,6 +1,7 @@
 ----Estructura y Restricciones Declarativas
 -- Foraneas. Definición de claves foraneas
-
+--Aviso
+ALTER TABLE AVISO ADD CONSTRAINT FK_Aviso_Session FOREIGN KEY(sesion) REFERENCES SESION(correo);
 --Sesion
 --No hay claves foraneas
 
