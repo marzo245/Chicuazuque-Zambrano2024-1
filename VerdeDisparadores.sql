@@ -122,7 +122,7 @@ BEFORE INSERT ON Tarjeta
 FOR EACH ROW
 BEGIN
 
-    IF :NEW.fechaVencimiento >= SYSDATE THEN
+    IF :NEW.fechaVencimiento < SYSDATE THEN
         raise_application_error(-20003,  'La tarjeta ya está vencida');
     END IF;
 
@@ -228,6 +228,17 @@ BEFORE DELETE ON Partido
 FOR EACH ROW
 BEGIN
    raise_application_error(-20007, 'No se puede');
+END;
+/
+CREATE SEQUENCE partido_seq
+START WITH 1
+INCREMENT BY 1;
+
+CREATE OR REPLACE TRIGGER partido_id_trigger
+BEFORE INSERT ON Partido
+FOR EACH ROW
+BEGIN
+  :NEW.codigo := partido_seq.NEXTVAL;
 END;
 /
 

@@ -18,7 +18,7 @@ ALTER TABLE Ve ADD PRIMARY KEY (publicidad,gratis);
 ALTER TABLE Pago ADD PRIMARY KEY (sesion);
 
 --Tarjeta
-ALTER TABLE Tarjeta ADD PRIMARY KEY (pago);
+ALTER TABLE Tarjeta ADD PRIMARY KEY (numero);
 
 --Es su jugador favorito
 ALTER TABLE Essujugadorfavorito ADD PRIMARY KEY (pago,jugadornit,jugadortid);

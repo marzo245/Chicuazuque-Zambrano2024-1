@@ -8,7 +8,7 @@
 --No hay claves únicas
 
 --Publicidad
-ALTER TABLE Publicidad ADD UNIQUE (URL);
+--ALTER TABLE Publicidad ADD UNIQUE (URL);
 
 --Ve
 --No hay claves únicas
@@ -17,8 +17,7 @@ ALTER TABLE Publicidad ADD UNIQUE (URL);
 --No hay claves únicas
 
 --Tarjeta
-ALTER TABLE Tarjeta ADD UNIQUE (numero);
-
+--No hay claves únicas
 --Es su jugador favorito
 --No hay claves únicas
 
