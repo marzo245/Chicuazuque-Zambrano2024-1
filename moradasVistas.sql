@@ -69,3 +69,15 @@ SELECT
 FROM Estadisticas E
 JOIN Jugador J ON E.jugadorNit = J.nit AND E.jugadorTid = J.tid
 GROUP BY J.nombre, E.equipo;
+
+CREATE OR REPLACE VIEW ClasificacionEquipos AS
+SELECT 
+    C.equipo,
+    C.puesto,
+    C.puntos,
+    C.partidosGanados,
+    C.partidosEmpatados,
+    C.partidosPerdidos  
+FROM Clasificacion C
+ORDER BY C.puesto;
+

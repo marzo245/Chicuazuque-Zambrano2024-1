@@ -1,4 +1,4 @@
-select * from publicidad
+select * from publicidad;
 
 --se anade tipo de dato XML--
 ALTER TABLE Publicidad ADD (URL_XML XMLTYPE);
