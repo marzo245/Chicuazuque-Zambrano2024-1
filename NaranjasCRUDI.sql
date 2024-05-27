@@ -41,7 +41,7 @@ CREATE OR REPLACE PACKAGE BODY Usuario_Package AS
         END IF;
 
         -- Insertar el usuario en la tabla Sesion
-        INSERT INTO Sesion (correo, nombre, fechaNacimineto)
+        INSERT INTO Sesion (correo, nombre, fechaNacimiento)
         VALUES (p_correo, p_nombre, p_fecha_nacimiento);
     END RegistrarUsuario;
 
@@ -99,7 +99,7 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
         END IF;
 
         -- Insertar el usuario en la tabla Pago
-        INSERT INTO Pago (sesion, fechaIncio, fechaFin)
+        INSERT INTO Pago (sesion, fechainicio, fechaFin)
         VALUES (p_correo, CURRENT_DATE, NULL);
     END RegistrarUsuarioPremium;
 END UsuarioPremium_Package;
@@ -135,7 +135,7 @@ CREATE OR REPLACE PACKAGE BODY EstadoSuscripcion_Package AS
         v_fecha_fin DATE;
     BEGIN
         -- Obtener las fechas de inicio y fin de la suscripción del usuario
-        SELECT fechaIncio, fechaFin INTO v_fecha_inicio, v_fecha_fin
+        SELECT fechainicio, fechaFin INTO v_fecha_inicio, v_fecha_fin
         FROM Pago
         WHERE sesion = p_nombre_usuario;
 
@@ -666,11 +666,11 @@ PROCEDURE CalcularPromedioSuscripciones IS
     v_promedio_suscripciones NUMBER;
 BEGIN
     -- Abrir un cursor para obtener el total de suscripciones por mes
-    FOR mes_cursor IN (SELECT TO_CHAR(fechaIncio, 'MM-YYYY') AS mes_anio,
+    FOR mes_cursor IN (SELECT TO_CHAR(fechainicio, 'MM-YYYY') AS mes_anio,
                               COUNT(*) AS total_suscripciones
                        FROM Pago
-                       GROUP BY TO_CHAR(fechaIncio, 'MM-YYYY')
-                       ORDER BY TO_DATE(TO_CHAR(fechaIncio, 'MM-YYYY'), 'MM-YYYY')) LOOP
+                       GROUP BY TO_CHAR(fechainicio, 'MM-YYYY')
+                       ORDER BY TO_DATE(TO_CHAR(fechainicio, 'MM-YYYY'), 'MM-YYYY')) LOOP
         -- Obtener los valores del cursor
         v_mes_anio := mes_cursor.mes_anio;
         v_total_suscripciones := mes_cursor.total_suscripciones;
@@ -679,7 +679,7 @@ BEGIN
         SELECT AVG(total_suscripciones) INTO v_promedio_suscripciones
         FROM (SELECT COUNT(*) AS total_suscripciones
               FROM Pago
-              GROUP BY TO_CHAR(fechaIncio, 'MM-YYYY'));
+              GROUP BY TO_CHAR(fechainicio, 'MM-YYYY'));
 
         -- Imprimir el resultado
         DBMS_OUTPUT.PUT_LINE('Mes y año: ' || v_mes_anio || ', Total de suscripciones: ' || v_total_suscripciones);

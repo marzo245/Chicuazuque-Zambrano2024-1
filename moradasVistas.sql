@@ -1,5 +1,5 @@
 --Promedio de usuarios premium por mes:
-CREATE VIEW PromedioUsuariosPremium AS
+CREATE OR REPLACE VIEW PromedioUsuariosPremium AS
 SELECT EXTRACT(YEAR FROM fechaInicio) AS year,
        EXTRACT(MONTH FROM fechaInicio) AS month,
        COUNT(DISTINCT sesion) / EXTRACT(MONTH FROM fechaInicio) AS avg_premium_users
@@ -7,7 +7,7 @@ FROM Pago
 GROUP BY EXTRACT(YEAR FROM fechaInicio), EXTRACT(MONTH FROM fechaInicio);
 
 --Mayor número de registros por mes:
-CREATE VIEW MayorNumeroRegistros AS
+CREATE OR REPLACE VIEW MayorNumeroRegistros AS
 SELECT year, month, num_records
 FROM (
     SELECT EXTRACT(YEAR FROM fechaInicio) AS year,
@@ -21,7 +21,7 @@ WHERE ROWNUM = 1;
 
 
 --Promedio del equipo durante una temporada:
-CREATE VIEW PromedioEquipoTemporada AS
+CREATE OR REPLACE VIEW PromedioEquipoTemporada AS
 SELECT E.equipo,
        SUM(E.asistencias) AS total_asistencias,
        SUM(E.tarjetasAmarillas) AS total_tarjetas_amarillas,
@@ -34,7 +34,7 @@ GROUP BY E.equipo;
 
 --Vistas Operativas:
 --Estado actual de la suscripción y tiempo de suscripción de un usuario específico:
-CREATE VIEW EstadoSuscripcionUsuario AS
+CREATE OR REPLACE VIEW EstadoSuscripcionUsuario AS
 SELECT 
     P.sesion,
     CASE
@@ -46,7 +46,7 @@ FROM Pago P;
 
 
 --Rendimiento de todos los equipos en una temporada:
-CREATE VIEW RendimientoEquipos AS
+CREATE OR REPLACE VIEW RendimientoEquipos AS
 SELECT 
     C.equipo,
     SUM(C.puntos) AS puntos_totales,
@@ -57,7 +57,7 @@ FROM Clasificacion C
 GROUP BY C.equipo;
 
 --Estadísticas de jugadores:
-CREATE VIEW EstadisticasJugadores AS
+CREATE OR REPLACE VIEW EstadisticasJugadores AS
 SELECT 
     J.nombre AS nombre_jugador,
     E.equipo,
