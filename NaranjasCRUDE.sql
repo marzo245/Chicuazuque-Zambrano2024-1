@@ -1,274 +1,269 @@
 
---CRUDE
-
---Creación de tablas
-
---Sesion
-CREATE TABLE Sesion(
-    correo varchar(60) not null,
-    nombre VARCHAR(20) not null,
-    fechaNacimineto date not NULL
-);
-
---Gratis
-CREATE TABLE Gratis(
-    sesion varchar(60) not null
-);
-
---Publicidad
-CREATE TABLE Publicidad(
-    nombre varchar(20) not null,
-    URL varchar(100) not null
-);
-
---ve
-CREATE TABLE Ve(
-    publicidad varchar(20) not null,
-    gratis varchar(60) not null
-);
-
---Pago
-CREATE TABLE Pago(
-    sesion varchar(60) not null,
-    fechaIncio date not null,
-    fechaFin date not null
-);
---Tarjeta
-CREATE TABLE Tarjeta(
-    numero int not null,
-    fechaVencimiento date not null,
-    cvv int not null,
-    pago VARCHAR(60) not null
-);
-
---Es su jugador favorito
-CREATE TABLE Essujugadorfavorito(
-    pago varchar(60) not null,
-    jugadornit varchar(10) not null,
-    jugadortid char(3)not null
-);
-
---Es su equipo favorito
-CREATE TABLE Essuequipofavorito(
-    pago varchar(60) not null,
-    equipo varchar(30) not null
-);
-
---Jugador
-CREATE TABLE Jugador(
-    nombre varchar(50) not null,
-    nit varchar(10) not null,
-    tid char(3)not null,
-    nacionalidad varchar(20) not null,
-    edad int not null,
-    altura float not null,
-    posicion varchar(16) not null
-);
---Pertenece 
-CREATE TABLE Pertenece(
-    jugadorNit varchar(10) not null,
-    jugadorTid char(3)not null,
-    equipo varchar(30) not null,
-    fechaInicio date not null,
-    fechaFin date not null
-);
-
---Equipo
-CREATE TABLE Equipo(
-    nombre varchar(30) not null,
-    ciudad varchar(20) not null,
-    estadio varchar(30),
-    dueño varchar(20) not null
-);
-
---Cuerpo Tecnico
-CREATE TABLE CuerpoTecnico(
-    nombre varchar(50) not null,
-    tid char(3)not null,
-    nid VARCHAR(20) not null,
-    nacionalidad varchar(20) not null,
-    cargo varchar(20) not null,
-    equipo varchar(30) not null
-);
-
---Partido
-CREATE TABLE Partido(
-    codigo int not null,
-    ligaNombre varchar(30) not null,
-    ligaFecha date not null,
-    equipoLocal varchar(30)   not null,
-    equipoVisitante varchar(30) not null,
-    golesLocal int not null,
-    golesVisitante int not null
-);
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Liga
-CREATE TABLE Liga(
-    nombre varchar(30) not null,
-    fechaInicio date not null,
-    fechaFin date ,
-    ganador varchar(30)
-);
 
---Clasificación
-CREATE TABLE Clasificacion(
-    ligaNombre varchar(30) not null,
-    ligaFecha date not null,
-    equipo varchar(30) not null,
-    puesto int NOT NULL,
-    partidosGanados int not null,
-    partidosEmpatados int not null,
-    partidosPerdidos int not null,
-    puntos int not null
-);
+--USUARIO
 
---Estadisticas
-CREATE TABLE Estadisticas(
-    partidoCodigo int not null,
-    jugadorNit varchar(10),
-    jugadorTid char(3),
-    equipo varchar(30) not null,
-    asistencias int not null,
-    tarjetasAmarillas int not null,
-    tarjetasRojas int not null,
-    posesionLocal float not null,
-    posesionVisitante float not null
-);
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crear el paquete para el registro de usuarios
+CREATE OR REPLACE PACKAGE Usuario_Package AS
+    PROCEDURE RegistrarUsuario(
+        p_correo VARCHAR2,
+        p_nombre VARCHAR2,
+        p_fecha_nacimiento DATE
+    );
+END Usuario_Package;
+/
 
---PK
 
---Primarias. Definición de claves primarias
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crear el paquete para el registro de usuarios premium(pagos)
 
---Sesion
-ALTER TABLE Sesion ADD PRIMARY KEY (correo);
 
---Gratis
-ALTER TABLE Gratis ADD PRIMARY KEY (sesion);
+CREATE OR REPLACE PACKAGE UsuarioPremium_Package AS
+    PROCEDURE RegistrarUsuarioPremium(
+        p_correo VARCHAR2,
+        p_nombre VARCHAR2,
+        p_fecha_nacimiento DATE
+    );
+END UsuarioPremium_Package;
+/
 
---Publicidad
-ALTER TABLE Publicidad ADD PRIMARY KEY (nombre);
 
---Ve
-ALTER TABLE Ve ADD PRIMARY KEY (publicidad,gratis);
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Pago
-ALTER TABLE Pago ADD PRIMARY KEY (sesion);
+--paquete para Saber el estado actual de su suscripcion y cuanto lleva suscrito--
 
---Tarjeta
-ALTER TABLE Tarjeta ADD PRIMARY KEY (pago);
+CREATE OR REPLACE PACKAGE EstadoSuscripcion_Package AS
+    PROCEDURE ObtenerEstadoSuscripcion(
+        p_nombre_usuario VARCHAR2,
+        p_correo_usuario VARCHAR2,
+        o_estado_suscripcion OUT VARCHAR2,
+        o_tiempo_suscrito OUT NUMBER
+    );
+END EstadoSuscripcion_Package;
+/
 
---Es su jugador favorito
-ALTER TABLE Essujugadorfavorito ADD PRIMARY KEY (pago,jugadornit,jugadortid);
 
---Es su equipo favorito
-ALTER TABLE Essuequipofavorito ADD PRIMARY KEY (pago,equipo);
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Jugador
-ALTER TABLE Jugador ADD PRIMARY KEY (nit,tid);
 
---Pertenece
-ALTER TABLE Pertenece ADD PRIMARY KEY (jugadorNit,jugadorTid,equipo,fechaInicio,fechaFin);
 
---Equipo
-ALTER TABLE Equipo ADD PRIMARY KEY (nombre);
+--ADMINISTRADOR--
 
---Cuerpo tecnico
-ALTER TABLE CuerpoTecnico ADD PRIMARY KEY (tid,nid);
 
---Partido
-ALTER TABLE Partido ADD PRIMARY KEY (codigo);
+    
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crear el paquete para agregar publicidad
 
---Liga
-ALTER TABLE Liga ADD PRIMARY KEY (nombre,fechaInicio);
+CREATE OR REPLACE PACKAGE Publicidad_Package AS
+    PROCEDURE AgregarPublicidad(
+        p_nombre VARCHAR2,
+        p_url VARCHAR2
+    );
+END Publicidad_Package;
+/
 
---Clasificacion
-ALTER TABLE Clasificacion ADD PRIMARY KEY (equipo,Liganombre,ligafecha);
 
---Estadisticas
-ALTER TABLE Estadisticas ADD PRIMARY KEY (partidocodigo);
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- Crear el paquete para mantener la liga
 
---FK
+CREATE OR REPLACE PACKAGE Liga_Package AS
+    PROCEDURE MantenerLiga(
+        p_nombre VARCHAR2,
+        p_fecha_inicio DATE,
+        p_fecha_fin DATE
+    );
+END Liga_Package;
+/
 
--- Foraneas. Definición de claves foraneas
 
---Sesion
---No hay claves foraneas
 
---Gratis
-ALTER TABLE Gratis ADD CONSTRAINT FK_Gratis_Sesion FOREIGN KEY (sesion) REFERENCES Sesion(correo);
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Publicidad
---No hay claves foraneas
+-- Crear el paquete para gestionar un partido
 
---Ve
-ALTER TABLE Ve ADD CONSTRAINT FK_Ve_Publicidad FOREIGN KEY (publicidad) REFERENCES Publicidad(nombre);
-ALTER TABLE Ve ADD CONSTRAINT FK_Ve_Gratis FOREIGN KEY (gratis) REFERENCES Gratis(sesion);
 
 
---Pago
-ALTER TABLE Pago ADD CONSTRAINT FK_Pago_Sesion FOREIGN KEY (sesion) REFERENCES Sesion(correo);
 
+CREATE OR REPLACE PACKAGE GestionPartidos AS
+    PROCEDURE agregarPartido(
+        p_ligaNombre IN VARCHAR2,
+        p_ligaFecha IN DATE,
+        p_equipoLocal IN VARCHAR2,
+        p_equipoVisitante IN VARCHAR2,
+        p_golesLocal IN INT,
+        p_golesVisitante IN INT
+    );
+    
+    PROCEDURE modificarGoles(
+        p_codigo IN INT,
+        p_nuevosGolesLocal IN INT,
+        p_nuevosGolesVisitante IN INT
+    );
+END GestionPartidos;
+/
 
---Tarjeta
-ALTER TABLE Tarjeta ADD CONSTRAINT FK_Tarjeta_Pago FOREIGN KEY (pago) REFERENCES Pago(sesion);
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Es su jugador favorito
-ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_Pago FOREIGN KEY (pago) REFERENCES Pago(sesion);
-ALTER TABLE Essujugadorfavorito ADD CONSTRAINT FK_Essujugadorfavorito_JugadorT FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
+-- Crear el paquete para generar y mantener las estadísticas de un partido
 
 
---Es su equipo favorito
-ALTER TABLE Essuequipofavorito ADD CONSTRAINT FK_Essuequipofavorito_Pago FOREIGN KEY (pago) REFERENCES Pago(sesion);
-ALTER TABLE Essuequipofavorito ADD CONSTRAINT FK_Essuequipofavorito_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
+CREATE OR REPLACE PACKAGE EstadisticasPartido_Package AS
+    PROCEDURE GenerarEstadisticasPartido(
+        p_partido_codigo INT,
+        p_jugador_nit VARCHAR2,
+        p_jugador_tid CHAR,
+        p_equipo VARCHAR2,
+        p_asistencias INT,
+        p_tarjetas_amarillas INT,
+        p_tarjetas_rojas INT,
+        p_posesion_local FLOAT,
+        p_posesion_visitante FLOAT
+    );
+END EstadisticasPartido_Package;
+/
 
 
---Pertenece
-ALTER TABLE Pertenece ADD CONSTRAINT FK_Pertenece_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
-ALTER TABLE Pertenece ADD CONSTRAINT FK_Pertenece_JugadorN FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crear el paquete para gestionar la clasificación de los equipos después de un partido
 
+CREATE OR REPLACE PACKAGE Clasificacion_Package AS
+    PROCEDURE GestionarClasificacion(
+        p_liga_nombre VARCHAR2,
+        p_liga_fecha  DATE,
+        p_equipo VARCHAR2,
+        p_puesto  INT,
+        p_partidos_ganados  INT,
+        p_partidos_empatados  INT,
+        p_partidos_perdidos  INT,
+        p_puntos  INT
+    );
+END Clasificacion_Package;
+/
 
---Cuerpo tecnico
-ALTER TABLE CuerpoTecnico ADD CONSTRAINT FK_CuerpoTecnico_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
---Partido
-ALTER TABLE Partido ADD CONSTRAINT FK_Partido_EquipoL FOREIGN KEY (equipoLocal) REFERENCES Equipo(nombre);
-ALTER TABLE Partido ADD CONSTRAINT FK_Partido_EquipoV FOREIGN KEY (equipoVisitante) REFERENCES Equipo(nombre);
-ALTER TABLE Partido ADD CONSTRAINT FK_Partido_LigaNombre FOREIGN KEY (ligaNombre,ligaFecha) REFERENCES Liga(nombre,fechaInicio);
 
+    
+--GERENTE DE EQUIPO--
 
---Liga
-ALTER TABLE Liga ADD CONSTRAINT FK_Liga_EquipoG FOREIGN KEY (ganador) REFERENCES Equipo(nombre);
 
 
---Clasificacion
-ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
-ALTER TABLE Clasificacion ADD CONSTRAINT FK_Clasificacion_LigaNombre FOREIGN KEY (ligaNombre,ligaFecha) REFERENCES Liga(nombre,fechaInicio);
+---------------------------------------------------------------------------------------------------------------------------------------------------
+-- Crear el paquete para que un gerente de equipo pueda registrar su equipo
 
 
---Estadisticas
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_JugadorN FOREIGN KEY (jugadornit,jugadortid) REFERENCES Jugador(nit,tid);
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Partido FOREIGN KEY (partido) REFERENCES Partido(codigo);
-ALTER TABLE Estadisticas ADD CONSTRAINT FK_Estadisticas_Equipo FOREIGN KEY (equipo) REFERENCES Equipo(nombre);
+CREATE OR REPLACE PACKAGE RegistroEquipo_Package AS
+    PROCEDURE RegistrarEquipo(
+        p_nombre IN VARCHAR2,
+        p_ciudad IN VARCHAR2,
+        p_estadio IN VARCHAR2,
+        p_dueno IN VARCHAR2
+    );
+END RegistroEquipo_Package;
+/
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+--paquete para mantener el cuerpo tecnico de un equipo
 
---UK
 
+-- Creación del paquete
+CREATE OR REPLACE PACKAGE CuerpoTecnico_Package AS
+    PROCEDURE RegistrarCuerpoTecnico(
+        p_nombre IN VARCHAR2,
+        p_tid IN CHAR,
+        p_nid IN VARCHAR2,
+        p_nacionalidad IN VARCHAR2,
+        p_cargo IN VARCHAR2,
+        p_equipo IN VARCHAR2
+    );
 
---Unicas. Definición de claves únicas
+    PROCEDURE ModificarEquipoCuerpoTecnico(
+        p_tid IN CHAR,
+        p_equipo IN VARCHAR2
+    );
 
+    PROCEDURE EliminarCuerpoTecnico(
+        p_tid IN CHAR
+    );
+END CuerpoTecnico_Package;
+/
 
---Publicidad
-ALTER TABLE Publicidad ADD UNIQUE (URL);
 
---Tarjeta
-ALTER TABLE Tarjeta ADD UNIQUE (numero);
 
---Equipo
-ALTER TABLE Equipo ADD UNIQUE (estadio);
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-- Crear el paquete para que un gerente de equipo pueda registrar sus jugadores
+
+CREATE OR REPLACE PACKAGE Jugador_Package AS
+    PROCEDURE RegistrarJugador(
+        p_nombre IN VARCHAR2,
+        p_nit IN VARCHAR2,
+        p_tid IN CHAR,
+        p_nacionalidad IN VARCHAR2,
+        p_edad IN INT,
+        p_altura IN FLOAT,
+        p_posicion IN VARCHAR2,
+        p_equipo IN VARCHAR2
+    );
+
+    PROCEDURE ModificarEquipoJugador(
+        p_nit IN VARCHAR2,
+        p_tid IN CHAR,
+        p_equipo IN VARCHAR2
+    );
+END Jugador_Package;
+/
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    
+--GERENTE APP(ORGANIZACION)--
+
+    
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+--paquete para Consultar el promedio de usuarios premium por mes--
+
+
+
+CREATE OR REPLACE PACKAGE PromedioSuscripciones_Package AS
+PROCEDURE CalcularPromedioSuscripciones;
+END PromedioSuscripciones_Package;
+/
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    
+--GERENTE DUEÑO DE UN EQUIPO--
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+--paquete para Consultas el promedio de su equipo durante una temporada--
+
+
+CREATE OR REPLACE PACKAGE DesempeñoEquipo_Package AS
+    PROCEDURE ObtenerDesempeñoEquipo(
+        p_nombre_equipo VARCHAR2,
+        p_temporada_inicio DATE,
+        p_temporada_fin DATE
+    );
+END DesempeñoEquipo_Package;
+/
+
+
 

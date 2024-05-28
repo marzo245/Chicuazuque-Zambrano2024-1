@@ -1,11 +1,8 @@
-INSERT INTO Pago (sesion, fechaIncio, fechaFin)
-VALUES (2, TO_DATE('2024-04-25', 'YYYY-MM-DD'), TO_DATE('2026-04-20', 'YYYY-MM-DD'));
+INSERT INTO Pago (sesion, fechaIncio, fechaFin) VALUES ('correo11@example.com', TO_DATE('2023-01-01','YYYY-MM-DD'), TO_DATE('2023-02-31','YYYY-MM-DD'));
 
-INSERT INTO Liga (nombre, fechaIncio, fechaFin,ganador)
-VALUES (aaaa, TO_DATE('2024-04-25', 'YYYY-MM-DD'), TO_DATE('2026-04-20', 'YYYY-MM-DD'),bbbb);
+INSERT INTO Liga (nombre, fechaInicio, fechaFin, ganador) VALUES ('Liga11', TO_DATE('2025-01-01','YYYY-MM-DD'), TO_DATE('2025-02-20','YYYY-MM-DD'), 'Equipo11');
 
-INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante)
-VALUES (2, 1, TO_DATE('2024-04-16', 'YYYY-MM-DD'), 'Equipo A', 'Equipo B', 2, 0);
+INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante) 
+VALUES (1, 'Liga111', TO_DATE('2025-02-01', 'YYYY-MM-DD'), 'Equipo111', 'Equipo222', 3, 1);
 
-INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante)
-VALUES (1, '1234567890', 'ABC123', 'Equipo A', 2, 1, 0, 60.5, 39.5);
+INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) VALUES (1, '132456','C.C', 'Equipo11', 1, 1, 0,39.5,60.5);
