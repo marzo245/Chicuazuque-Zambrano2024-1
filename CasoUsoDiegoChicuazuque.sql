@@ -15,9 +15,9 @@ select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TR
 BEGIN
     GestionPartidos.agregarPartido(
         p_ligaNombre => 'Liga 1',
-        p_ligaFecha => TO_DATE('2024-05-27', 'YYYY-MM-DD'),
-        p_equipoLocal => 'Equipo Local',
-        p_equipoVisitante => 'Equipo Visitante',
+        p_ligaFecha => TO_DATE('2023-01-01', 'YYYY-MM-DD'),
+        p_equipoLocal => 'Equipo1',
+        p_equipoVisitante => 'Equipo2',
         p_golesLocal => 3,
         p_golesVisitante => 2
     );
