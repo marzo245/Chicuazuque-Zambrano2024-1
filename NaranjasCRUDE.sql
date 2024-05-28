@@ -36,7 +36,6 @@ END UsuarioPremium_Package;
 --paquete para Saber el estado actual de su suscripcion y cuanto lleva suscrito--
 
 CREATE OR REPLACE PACKAGE EstadoSuscripcion_Package AS
-    -- Declarar el procedimiento para obtener el estado actual de la suscripción de un usuario y el tiempo que lleva suscrito
     PROCEDURE ObtenerEstadoSuscripcion(
         p_nombre_usuario VARCHAR2,
         p_correo_usuario VARCHAR2,
@@ -91,7 +90,6 @@ END Liga_Package;
 
 
 CREATE OR REPLACE PACKAGE GestionPartidos AS
-    -- Procedimiento para agregar un nuevo partido
     PROCEDURE agregarPartido(
         p_ligaNombre IN VARCHAR2,
         p_ligaFecha IN DATE,
@@ -101,7 +99,6 @@ CREATE OR REPLACE PACKAGE GestionPartidos AS
         p_golesVisitante IN INT
     );
     
-    -- Procedimiento para modificar los goles de un partido
     PROCEDURE modificarGoles(
         p_codigo IN INT,
         p_nuevosGolesLocal IN INT,
@@ -206,7 +203,6 @@ END CuerpoTecnico_Package;
 
 -- Crear el paquete para que un gerente de equipo pueda registrar sus jugadores
 
--- Creación del paquete
 CREATE OR REPLACE PACKAGE Jugador_Package AS
     PROCEDURE RegistrarJugador(
         p_nombre IN VARCHAR2,
@@ -243,7 +239,6 @@ END Jugador_Package;
 
 
 CREATE OR REPLACE PACKAGE PromedioSuscripciones_Package AS
--- Declarar el procedimiento para calcular el promedio de suscripciones por mes
 PROCEDURE CalcularPromedioSuscripciones;
 END PromedioSuscripciones_Package;
 /
@@ -261,9 +256,7 @@ END PromedioSuscripciones_Package;
 --paquete para Consultas el promedio de su equipo durante una temporada--
 
 
--- Crear el paquete para obtener el desempeño del equipo en una temporada
 CREATE OR REPLACE PACKAGE DesempeñoEquipo_Package AS
-    -- Declarar el procedimiento para obtener el desempeño del equipo en una temporada
     PROCEDURE ObtenerDesempeñoEquipo(
         p_nombre_equipo VARCHAR2,
         p_temporada_inicio DATE,
