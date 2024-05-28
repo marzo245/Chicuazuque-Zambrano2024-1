@@ -76,7 +76,7 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
             RAISE_APPLICATION_ERROR(-20003, 'El correo ya está registrado como usuario premium.');
         END IF;
 
-        INSERT INTO Pago (sesion, fechaIncio, fechaFin)
+        INSERT INTO Pago (sesion, fechainicio, fechaFin)
         VALUES (p_correo, CURRENT_DATE, NULL);
     END RegistrarUsuarioPremium;
 END UsuarioPremium_Package;
@@ -100,7 +100,7 @@ CREATE OR REPLACE PACKAGE BODY EstadoSuscripcion_Package AS
         v_fecha_inicio DATE;
         v_fecha_fin DATE;
     BEGIN
-        SELECT fechaIncio, fechaFin INTO v_fecha_inicio, v_fecha_fin
+        SELECT fechainicio, fechaFin INTO v_fecha_inicio, v_fecha_fin
         FROM Pago
         WHERE sesion = p_nombre_usuario;
 

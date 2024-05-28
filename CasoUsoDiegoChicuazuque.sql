@@ -27,8 +27,11 @@ END;
 select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');
 
 --una vez esto sucede, un usuario se registra en la aplicacion(hipoteticamente) y quiere ver como va su equipo en la liga en la que esta jugando
---5. El usuario quiere ver como va su equipo en la liga
+--5. El usuario quiere ver como va su equipo en la liga(Aqui se registra el primero y el back haria lo siguiente)
 GRANT USUARIOS TO bd1000095494;
+--El back haria lo siguiente
+-- primero mira si el correo es valido
+
 
 -6. El usuiaro quiere ver como va su equipo en la liga
 select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');
