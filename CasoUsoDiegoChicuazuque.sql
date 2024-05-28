@@ -42,18 +42,22 @@ COMMIT;-- confirmar la transacción después de ejecutar el procedimiento
 -6. El usuiaro quiere ver como va su equipo en la liga
 select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');
 
-select * from bd1000021973.sesion;
---como el usuario no se registro aparte el modo premium que es el de pago 
+select * from bd1000021973.sesion where correo = 'juan.zambrano@mail.escuelaing.edu.co';
+--como el usuario solo se registro, no tiene las opcione de premium, por lo que  ve  publicidad ademas de que no puede agregar equipos o jugadores favoritos
 select * from bd1000021973.gratis;
 
---7. el usuario se registra como usuario premium 
---El back haria lo siguiente(aqui supusimos pago una membresia por 2 años aprox por eso 2026)
+--7. el usuario se vuelve usuario premium para hacer uso de las obciones premium
+--El back haria lo siguiente(aqui supuse pago una membresia por 1mes aprox por eso 2026)
 BEGIN
     bd1000021973.UsuarioPremium_Package.RegistrarUsuarioPremium(
         p_correo => 'juan@mail.escuelaing.edu.co', 
-        p_fecha_Fin => TO_DATE('2026-01-01', 'YYYY-MM-DD') 
+        p_fecha_Fin => TO_DATE('2024-06-28', 'YYYY-MM-DD') 
     );
 END;
 /
 COMMIT;
-select * from bd1000021973.pago;
+--8. El usuario quiere ver si ya es premium
+select * from bd1000021973.pago where sesion = 'juan@mail.escuelaing.edu.co';
+
+--9. El usuario quiere agregar un equipo favorito
+--El back haria lo siguiente
