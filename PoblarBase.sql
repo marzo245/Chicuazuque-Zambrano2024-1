@@ -1,114 +1,113 @@
---POBLAR EQUIPO--
-insert into equipo (nombre, ciudad, estadio, due�o) values ('dapibus duis', 'Sapareva Banya', 'feugiat', 'Benito McConway');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nulla', 'Berl�n', 'non mauris', 'Davin Tight');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('fermentum donec', 'Bianba', 'tincidunt', 'Adrienne Starte');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('aliquam non', 'Matinha', 'maecenas ut', 'Natale Barnes');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('eleifend', 'Jahrom', 'sollicitudin vitae', 'Alleen Wohlers');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('porta', 'Pancoran', 'nisi', 'Bren Sadat');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nulla ut', 'Nanggorak', 'nisl', 'Angelia Gerrell');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('eu', 'Sumilao', 'interdum', 'Martie Littrik');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sagittis dui', 'Marseille', 'est phasellus', 'Mari Fransinelli');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nullam porttitor', 'Mizhhir�ya', 'sed accumsan', 'Tate Boast');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sapien quis', 'Ban Selaphum', 'donec semper', 'Trent Brearton');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('gravida', 'Rzhev', 'mollis', 'Lyndsey Standen');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nullam', 'Portela', 'magna vestibulum', 'Saxe Wincott');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('niaasc', 'Nikoa', 'tur', 'Chelsa');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nonummy integer', 'Shoushan', 'luctus', 'Carlos Flaune');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('duis aliquam', 'Chumphon Buri', 'at', 'Agretha Gidley');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('eleifend', 'Toupopu', 'quam', 'Finlay Kemmer');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sed tristique', 'Magsaysay', 'lacinia', 'Kevina Keymar');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('hendrerit', 'Carbajales', 'proin risus', 'Fredelia Sewill');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('dictumst', 'Salem', 'aenean lectus', 'Gleda Sextone');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ut', 'Fengkou', 'lacus at', 'Bill McComas');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('mauris', 'Ambanja', 'aenean sit', 'Garvey Hanstock');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ridiculus', 'Ryczyw�?', 'justo', 'Cally Casaccia');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('enim blandit', 'Wudan', 'pellentesque at', 'Chuck Tryme');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('quisque erat', 'Napoli', 'aliquam', 'Chance Chastanet');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('eu est', 'Ariz', 'tortor', 'Jessie Dransfield');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('leo maecenas', 'Budapest', 'rhoncus sed', 'Noak Mugford');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ultrices', 'Guj?', 'sodales scelerisque', 'Dean Guierre');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('mauris lacinia', 'Juiz de Fora', 'eu nibh', 'Celestia Glanester');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('eu', 'Blokdesa Situgede', 'id sapien', 'Jillene Keford');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('nam ultrices', 'Hrastnik', 'pellentesque eget', 'Lucina Mulliss');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('mattis pulvinar', 'Shklo', 'quisque', 'Regine Giacaponi');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ligula', 'Manticao', 'feugiat non', 'Nial Bulluck');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('quam', 'Wentai', 'interdum mauris', 'Jacquie Postance');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sollicitudin vitae', 'Cot�-Lai', 'lacus purus', 'Dale Yerill');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('condimentum neque', 'Dingzhai', 'sed', 'Darcee MacConnell');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('non', 'Arras', 'ut volutpat', 'Mureil Hugill');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('vestibulum', 'Tomorlog', 'velit', 'Carri Jack');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('dis parturient', 'Gordon Town', 'eget', 'Adelina Matthessen');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('montes nascetur', 'Nagato', 'convallis tortor', 'Avie Dinwoodie');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('phasellus sit', 'Nanping', 'consequat', 'Inness Crumpe');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ipsum', 'Mantampay', 'quisque arcu', 'Ferdie Spondley');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('posuere cubilia', 'Almeria', 'vestibulum aliquet', 'Roanne Phillippo');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ligula', 'Ramadi', 'in tempus', 'Murdoch Trousdale');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('praesent', 'Tarragona', 'duis faucibus', 'Harriot Gueinn');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('tempus', 'Ondo', 'porttitor lacus', 'Banky Paulin');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('et ultrices', 'Porto Seguro', 'sagittis', 'Elisabetta Coil');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sed', 'Drien Rampak', 'in', 'Angelina Lile');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('ultrices enim', 'Pinsk', 'rhoncus', 'Cherye Emery');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('tellus nulla', 'Balally', 'justo sit', 'Rollin McNirlan');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('praese', 'Tarrona', 'duisaucibus', 'rriot Gueinn');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('mpus', 'Ondo', 'porttiacus', 'Banky lin');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('et ulices', 'Porto guro', 'sattis', 'Elista Coil');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('sehhhid', 'Drien pak', 'in', 'Angelina Lile');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('uices enim', 'Psk', 'oncus', 'Chye Emery');
-insert into equipo (nombre, ciudad, estadio, due�o) values ('teus nulla', 'Bally', 'jto sit', 'Rlin McNirlan');
-
+insert into equipo (nombre, ciudad, estadio, dueño) values ('dapibus duis', 'Sapareva Banya', 'feugiat', 'Benito McConway');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nulla', 'Berl�n', 'non mauris', 'Davin Tight');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('fermentum donec', 'Bianba', 'tincidunt', 'Adrienne Starte');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('aliquam non', 'Matinha', 'maecenas ut', 'Natale Barnes');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('eleifend', 'Jahrom', 'sollicitudin vitae', 'Alleen Wohlers');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('porta', 'Pancoran', 'nisi', 'Bren Sadat');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nulla ut', 'Nanggorak', 'nisl', 'Angelia Gerrell');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('eu', 'Sumilao', 'interdum', 'Martie Littrik');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sagittis dui', 'Marseille', 'est phasellus', 'Mari Fransinelli');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nullam porttitor', 'Mizhhir�ya', 'sed accumsan', 'Tate Boast');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sapien quis', 'Ban Selaphum', 'donec semper', 'Trent Brearton');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('gravida', 'Rzhev', 'mollis', 'Lyndsey Standen');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nullam', 'Portela', 'magna vestibulum', 'Saxe Wincott');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('niaasc', 'Nikoa', 'tur', 'Chelsa');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nonummy integer', 'Shoushan', 'luctus', 'Carlos Flaune');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('duis aliquam', 'Chumphon Buri', 'at', 'Agretha Gidley');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('eleifend', 'Toupopu', 'quam', 'Finlay Kemmer');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sed tristique', 'Magsaysay', 'lacinia', 'Kevina Keymar');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('hendrerit', 'Carbajales', 'proin risus', 'Fredelia Sewill');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('dictumst', 'Salem', 'aenean lectus', 'Gleda Sextone');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ut', 'Fengkou', 'lacus at', 'Bill McComas');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('mauris', 'Ambanja', 'aenean sit', 'Garvey Hanstock');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ridiculus', 'Ryczyw�?', 'justo', 'Cally Casaccia');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('enim blandit', 'Wudan', 'pellentesque at', 'Chuck Tryme');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('quisque erat', 'Napoli', 'aliquam', 'Chance Chastanet');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('eu est', 'Ariz', 'tortor', 'Jessie Dransfield');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('leo maecenas', 'Budapest', 'rhoncus sed', 'Noak Mugford');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ultrices', 'Guj?', 'sodales scelerisque', 'Dean Guierre');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('mauris lacinia', 'Juiz de Fora', 'eu nibh', 'Celestia Glanester');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('eu', 'Blokdesa Situgede', 'id sapien', 'Jillene Keford');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('nam ultrices', 'Hrastnik', 'pellentesque eget', 'Lucina Mulliss');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('mattis pulvinar', 'Shklo', 'quisque', 'Regine Giacaponi');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ligula', 'Manticao', 'feugiat non', 'Nial Bulluck');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('quam', 'Wentai', 'interdum mauris', 'Jacquie Postance');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sollicitudin vitae', 'Cot�-Lai', 'lacus purus', 'Dale Yerill');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('condimentum neque', 'Dingzhai', 'sed', 'Darcee MacConnell');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('non', 'Arras', 'ut volutpat', 'Mureil Hugill');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('vestibulum', 'Tomorlog', 'velit', 'Carri Jack');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('dis parturient', 'Gordon Town', 'eget', 'Adelina Matthessen');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('montes nascetur', 'Nagato', 'convallis tortor', 'Avie Dinwoodie');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('phasellus sit', 'Nanping', 'consequat', 'Inness Crumpe');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ipsum', 'Mantampay', 'quisque arcu', 'Ferdie Spondley');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('posuere cubilia', 'Almeria', 'vestibulum aliquet', 'Roanne Phillippo');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ligula', 'Ramadi', 'in tempus', 'Murdoch Trousdale');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('praesent', 'Tarragona', 'duis faucibus', 'Harriot Gueinn');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('tempus', 'Ondo', 'porttitor lacus', 'Banky Paulin');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('et ultrices', 'Porto Seguro', 'sagittis', 'Elisabetta Coil');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sed', 'Drien Rampak', 'in', 'Angelina Lile');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('ultrices enim', 'Pinsk', 'rhoncus', 'Cherye Emery');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('tellus nulla', 'Balally', 'justo sit', 'Rollin McNirlan');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('praese', 'Tarrona', 'duisaucibus', 'rriot Gueinn');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('mpus', 'Ondo', 'porttiacus', 'Banky lin');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('et ulices', 'Porto guro', 'sattis', 'Elista Coil');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('sehhhid', 'Drien pak', 'in', 'Angelina Lile');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('uices enim', 'Psk', 'oncus', 'Chye Emery');
+insert into equipo (nombre, ciudad, estadio, dueño) values ('teus nulla', 'Bally', 'jto sit', 'Rlin McNirlan');
 select * from equipo;
 
 --SESION--
-insert into sesion (correo, nombre, fechaNacimiento) values ('lriba0@alibaba.com', 'Lyndsie Riba', '19/2/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('ewesgate1@themeforest.net', 'Elsinore Wesgate', '17/11/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('gdi2@seattletimes.com', 'Gilbertine Di Carlo', '10/10/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('hfaulkes3@who.int', 'Hamid Faulkes', '1/6/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('daiskovitch4@umich.edu', 'Denys Aiskovitch', '16/8/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('froseburgh5@phpbb.com', 'Frederic Roseburgh', '4/8/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('kpittman6@microsoft.com', 'Karol Pittman', '12/6/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('anorthwood7@intel.com', 'Adolpho Northwood', '1/3/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('ohetterich8@yellowbook.com', 'Ossie Hetterich', '27/10/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('cslobom9@latimes.com', 'Cele Slobom', '29/12/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('kmadderna@bloomberg.com', 'Kane Maddern', '12/6/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('mclemensonb@printfriendly.com', 'Myrvyn Clemenson', '28/10/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('acoxheadc@webmd.com', 'Averil Coxhead', '2/7/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('wdaneluttid@hostgator.com', 'Weylin Danelutti', '18/4/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('tburtte@geocities.jp', 'Tab Burtt', '30/4/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('gderrellf@mayoclinic.com', 'Gates Derrell', '25/8/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('smaccig@chronoengine.com', 'Salvatore Macci', '25/7/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('wbischoffh@shutterfly.com', 'Walden Bischoff', '17/4/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('smcwhanneli@jigsy.com', 'Shermie McWhannel', '22/2/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('gcohanij@mysql.com', 'Griff Cohani', '9/8/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('hcurnnokkk@scribd.com', 'Hollie Curnnokk', '29/4/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('pmallisonl@thetimes.co.uk', 'Pip Mallison', '25/5/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('lroulstonm@harvard.edu', 'Lorette Roulston', '20/12/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('bambrodin@hp.com', 'Beniamino Ambrodi', '28/7/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('tepgraveo@ezinearticles.com', 'Timothee Epgrave', '16/11/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('socannonp@google.co.uk', 'Sawyere O''Cannon', '5/9/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('sgeffenq@t-online.de', 'Sharity Geffen', '1/7/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('wcreightonr@virginia.edu', 'Wake Creighton', '5/1/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('awedlakes@newsvine.com', 'Allys Wedlake', '4/11/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('mguaret@bizjournals.com', 'Marlie Guare', '20/11/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('jmohammedu@discuz.net', 'Josiah Mohammed', '11/1/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('ndaccav@ameblo.jp', 'Noe Dacca', '2/5/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('hmaccaffertyw@google.com', 'Hailee MacCafferty', '30/8/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('dmcasparanx@apache.org', 'Darlene Mcasparan', '12/4/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('hduetschey@google.it', 'Holly Duetsche', '20/6/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('hbaronz@moonfruit.com', 'Hardy Baron', '6/6/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('lsimcoe10@ebay.co.uk', 'Leontine Simcoe', '12/4/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('sodowne11@usnews.com', 'Sephira O''Downe', '17/10/2003');
-insert into sesion (correo, nombre, fechaNacimiento) values ('pkalinke12@oracle.com', 'Patrica Kalinke', '14/1/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('ewoollam13@ning.com', 'Essy Woollam', '21/8/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('agoodge14@bandcamp.com', 'Anderson Goodge', '21/5/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('sbabonau15@de.vu', 'Sosanna Babonau', '4/1/2002');
-insert into sesion (correo, nombre, fechaNacimiento) values ('tdefond16@ow.ly', 'Tom Defond', '17/2/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('kbittlestone17@tinyurl.com', 'Kinnie Bittlestone', '9/5/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('adoogue18@unblog.fr', 'Aigneis Doogue', '14/4/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('bphlipon19@rediff.com', 'Bambi Phlipon', '15/1/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('lvictoria1a@google.com.br', 'Luciano Victoria', '30/4/2004');
-insert into sesion (correo, nombre, fechaNacimiento) values ('bnorthidge1b@msu.edu', 'Barty Northidge', '15/10/2000');
-insert into sesion (correo, nombre, fechaNacimiento) values ('kdumsday1c@chron.com', 'Kata Dumsday', '26/9/2001');
-insert into sesion (correo, nombre, fechaNacimiento) values ('mgeall1d@nih.gov', 'Meara Geall', '9/10/2001');
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('lriba0@alibaba.com', 'Lyndsie Riba', TO_DATE('2001-02-19', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('ewesgate1@themeforest.net', 'Elsinore Wesgate', TO_DATE('2000-11-17', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('gdi2@seattletimes.com', 'Gilbertine Di Carlo', TO_DATE('2002-10-10', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('hfaulkes3@who.int', 'Hamid Faulkes', TO_DATE('2004-06-01', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('daiskovitch4@umich.edu', 'Denys Aiskovitch', TO_DATE('2002-08-16', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('froseburgh5@phpbb.com', 'Frederic Roseburgh', TO_DATE('2002-08-04', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('kpittman6@microsoft.com', 'Karol Pittman', TO_DATE('2002-06-12', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('anorthwood7@intel.com', 'Adolpho Northwood', TO_DATE('2001-03-01', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('ohetterich8@yellowbook.com', 'Ossie Hetterich', TO_DATE('2003-10-27', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('cslobom9@latimes.com', 'Cele Slobom', TO_DATE('2000-12-29', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('kmadderna@bloomberg.com', 'Kane Maddern', TO_DATE('2003-06-12', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('mclemensonb@printfriendly.com', 'Myrvyn Clemenson', TO_DATE('2003-10-28', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('acoxheadc@webmd.com', 'Averil Coxhead', TO_DATE('2000-07-02', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('wdaneluttid@hostgator.com', 'Weylin Danelutti', TO_DATE('2003-04-18', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('tburtte@geocities.jp', 'Tab Burtt', TO_DATE('2004-04-30', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('gderrellf@mayoclinic.com', 'Gates Derrell', TO_DATE('2000-08-25', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('smaccig@chronoengine.com', 'Salvatore Macci', TO_DATE('2004-07-25', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('wbischoffh@shutterfly.com', 'Walden Bischoff', TO_DATE('2003-04-17', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('smcwhanneli@jigsy.com', 'Shermie McWhannel', TO_DATE('2001-02-22', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('gcohanij@mysql.com', 'Griff Cohani', TO_DATE('2000-08-09', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('hcurnnokkk@scribd.com', 'Hollie Curnnokk', TO_DATE('2004-04-29', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('pmallisonl@thetimes.co.uk', 'Pip Mallison', TO_DATE('2003-05-25', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('lroulstonm@harvard.edu', 'Lorette Roulston', TO_DATE('2001-12-20', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('bambrodin@hp.com', 'Beniamino Ambrodi', TO_DATE('2001-07-28', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('tepgraveo@ezinearticles.com', 'Timothee Epgrave', TO_DATE('2000-11-16', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('socannonp@google.co.uk', 'Sawyere O''Cannon', TO_DATE('2003-09-05', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('sgeffenq@t-online.de', 'Sharity Geffen', TO_DATE('2002-07-01', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('wcreightonr@virginia.edu', 'Wake Creighton', TO_DATE('2001-01-05', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('awedlakes@newsvine.com', 'Allys Wedlake', TO_DATE('2001-11-04', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('mguaret@bizjournals.com', 'Marlie Guare', TO_DATE('2001-11-20', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('jmohammedu@discuz.net', 'Josiah Mohammed', TO_DATE('2004-01-11', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('ndaccav@ameblo.jp', 'Noe Dacca', TO_DATE('2002-05-02', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('hmaccaffertyw@google.com', 'Hailee MacCafferty', TO_DATE('2001-08-30', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('dmcasparanx@apache.org', 'Darlene Mcasparan', TO_DATE('2001-04-12', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('hduetschey@google.it', 'Holly Duetsche', TO_DATE('2002-06-20', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('hbaronz@moonfruit.com', 'Hardy Baron', TO_DATE('2000-06-06', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('lsimcoe10@ebay.co.uk', 'Leontine Simcoe', TO_DATE('2004-04-12', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('sodowne11@usnews.com', 'Sephira O''Downe', TO_DATE('2003-10-17', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('pkalinke12@oracle.com', 'Patrica Kalinke', TO_DATE('2002-01-14', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('ewoollam13@ning.com', 'Essy Woollam', TO_DATE('2001-08-21', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('agoodge14@bandcamp.com', 'Anderson Goodge', TO_DATE('2004-05-21', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('sbabonau15@de.vu', 'Sosanna Babonau', TO_DATE('2002-01-04', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('tdefond16@ow.ly', 'Tom Defond', TO_DATE('2001-02-17', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('kbittlestone17@tinyurl.com', 'Kinnie Bittlestone', TO_DATE('2001-05-09', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('adoogue18@unblog.fr', 'Aigneis Doogue', TO_DATE('2004-04-14', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('bphlipon19@rediff.com', 'Bambi Phlipon', TO_DATE('2004-01-15', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('lvictoria1a@google.com.br', 'Luciano Victoria', TO_DATE('2004-04-30', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('bnorthidge1b@msu.edu', 'Barty Northidge', TO_DATE('2000-10-15', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('kdumsday1c@chron.com', 'Kata Dumsday', TO_DATE('2001-09-26', 'YYYY-MM-DD'));
+INSERT INTO sesion (correo, nombre, fechaNacimiento) VALUES ('mgeall1d@nih.gov', 'Meara Geall', TO_DATE('2001-10-09', 'YYYY-MM-DD'));
+
 
 select * from sesion;
 
@@ -152,7 +151,6 @@ insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) val
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Stillman Sellor', 29262, 'C.C', 'Ukraine', 40, 1.28, 'Defensa');
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Ulises Dongall', 26770, 'C.C', 'Cuba', 28, 1.45, 'Delantero');
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Dara Brockie', 99483, 'C.C', 'Venezuela', 36, 1.2, 'Delantero');
-insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Kris Stainton', 41842, 'C.C', 'Central African Republic', 21, 1.75, 'Delantero');
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Bernete Sheards', 49102, 'T.I', 'Indonesia', 32, 1.7, 'Defensa');
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Bridgette Ethersey', 63438, 'C.C', 'China', 28, 1.29, 'Defensa');
 insert into jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion) values ('Karita Millions', 19334, 'T.I', 'China', 17, 1.55, 'Delantero');
@@ -183,73 +181,73 @@ select * from jugador;
 
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (67629, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (67629, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (19358, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (19358, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (54431, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (54431, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (23104, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (23104, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (66605, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (66605, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (14147, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (14147, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (19888, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (19888, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (77183, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (77183, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (10605, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (10605, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (83426, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (83426, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (35049, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (35049, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (80737, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (80737, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (91352, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (91352, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (49596, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (49596, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (53801, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (53801, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (91528, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (91528, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (92132, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (92132, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (57407, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (57407, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (87602, 'T.I', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (87602, 'T.I', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
 INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin)
-VALUES (89578, 'C.C', 'dapibus duis', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+VALUES (89578, 'C.C', 'Equipo1', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
 
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (41323, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (10988, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (68208, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (29262, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (26770, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (99483, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (41842, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (49102, 'T.I', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (63438, 'C.C', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (19334, 'T.I', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
-INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (58307, 'T.I', 'nulla', TO_DATE('2023-01-01', 'YYYY-MM-DD'), T
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (41323, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (10988, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (68208, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (29262, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (26770, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (99483, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (92596, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (49102, 'T.I', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (63438, 'C.C', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (19334, 'T.I', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
+INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo, fechaInicio, fechaFin) VALUES (58307, 'T.I', 'Equipo2', TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2024-01-01', 'YYYY-MM-DD'));
