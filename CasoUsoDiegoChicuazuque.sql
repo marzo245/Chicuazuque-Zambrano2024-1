@@ -23,15 +23,37 @@ BEGIN
     );
 END;
 /
+COMMIT; -- confirmar la transacción después de ejecutar el procedimiento
 --4. Una vez el administrador mete el partido, el quiere ver como quedo la clasificacion actualizada
 select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');
 
 --una vez esto sucede, un usuario se registra en la aplicacion(hipoteticamente) y quiere ver como va su equipo en la liga en la que esta jugando
---5. El usuario quiere ver como va su equipo en la liga(Aqui se registra el primero y el back haria lo siguiente)
-GRANT USUARIOS TO bd1000095494;
+--5. El usuario quiere ver como va su equipo en la liga(Aqui se registra el primero y el back haria lo siguiente) GRANT USUARIOS TO bd1000095494;
 --El back haria lo siguiente
--- primero mira si el correo es valido
-
-
+BEGIN 
+    bd1000021973.Usuario_Package.RegistrarUsuario(
+        p_correo => 'juan.zambrano@mail.escuelaing.edu.co', 
+        p_nombre => 'Diego Chicuazuque',
+        p_fecha_nacimiento => TO_DATE('1999-01-01', 'YYYY-MM-DD')
+    );
+END;
+/
+COMMIT;-- confirmar la transacción después de ejecutar el procedimiento
 -6. El usuiaro quiere ver como va su equipo en la liga
 select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');
+
+select * from bd1000021973.sesion;
+--como el usuario no se registro aparte el modo premium que es el de pago 
+select * from bd1000021973.gratis;
+
+--7. el usuario se registra como usuario premium 
+--El back haria lo siguiente(aqui supusimos pago una membresia por 2 años aprox por eso 2026)
+BEGIN
+    bd1000021973.UsuarioPremium_Package.RegistrarUsuarioPremium(
+        p_correo => 'juan@mail.escuelaing.edu.co', 
+        p_fecha_Fin => TO_DATE('2026-01-01', 'YYYY-MM-DD') 
+    );
+END;
+/
+COMMIT;
+select * from bd1000021973.pago;

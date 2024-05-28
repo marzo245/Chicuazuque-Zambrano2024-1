@@ -23,8 +23,7 @@ END Usuario_Package;
 CREATE OR REPLACE PACKAGE UsuarioPremium_Package AS
     PROCEDURE RegistrarUsuarioPremium(
         p_correo VARCHAR2,
-        p_nombre VARCHAR2,
-        p_fecha_nacimiento DATE
+        p_fecha_fin DATE
     );
 END UsuarioPremium_Package;
 /

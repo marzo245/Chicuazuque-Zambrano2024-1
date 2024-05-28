@@ -29,7 +29,7 @@ CREATE OR REPLACE PACKAGE BODY Usuario_Package AS
             RAISE_APPLICATION_ERROR(-20002, 'Debe ser mayor de 16 años para registrarse.');
         END IF;
 
-        INSERT INTO Sesion (correo, nombre, fechaNacimineto)
+        INSERT INTO Sesion (correo, nombre, fechaNacimiento)
         VALUES (p_correo, p_nombre, p_fecha_nacimiento);
     END RegistrarUsuario;
 
@@ -49,8 +49,7 @@ END Usuario_Package;
 CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
     PROCEDURE RegistrarUsuarioPremium(
         p_correo VARCHAR2,
-        p_nombre VARCHAR2,
-        p_fecha_nacimiento DATE
+        p_fecha_fin DATE
     ) IS
     v_count INTEGER;
     BEGIN
@@ -63,9 +62,6 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
             RAISE_APPLICATION_ERROR(-20001, 'El correo proporcionado no cumple con los criterios de tipo correo o no existe en la base de datos.');
         END IF;
 
-        IF p_fecha_nacimiento >= ADD_MONTHS(SYSDATE, -16 * 12) THEN
-            RAISE_APPLICATION_ERROR(-20002, 'Debe ser mayor de 16 años para registrarse como usuario premium.');
-        END IF;
 
         SELECT COUNT(*)
         INTO v_count
@@ -77,7 +73,7 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
         END IF;
 
         INSERT INTO Pago (sesion, fechainicio, fechaFin)
-        VALUES (p_correo, CURRENT_DATE, NULL);
+        VALUES (p_correo, CURRENT_DATE, p_fecha_fin);
     END RegistrarUsuarioPremium;
 END UsuarioPremium_Package;
 /
