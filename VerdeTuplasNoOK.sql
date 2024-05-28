@@ -1,11 +1,12 @@
-INSERT INTO Pago (sesion, fechaIncio, fechaFin)
-VALUES (2, TO_DATE('2024-04-25', 'YYYY-MM-DD'), TO_DATE('2023-04-20', 'YYYY-MM-DD'));
+--intentar insertar un pago con un correo que no existe
+INSERT INTO Pago (sesion, fechaIncio, fechaFin) VALUES ('correoInxistente@example.com', '2023-01-01', '2023-02-12');
 
-INSERT INTO Liga (nombre, fechaIncio, fechaFin,ganador)
-VALUES (aaaa, TO_DATE('2024-04-25', 'YYYY-MM-DD'), TO_DATE('2023-04-20', 'YYYY-MM-DD'),bbbb);
+--intentar insertar una liga con fecha de inicio mayor a la de fin
+INSERT INTO Liga (nombre, fechaInicio, fechaFin, ganador) VALUES ('Liga3', '2023-01-01', '2022-12-31', 'Equipo11');
+--intentar insertar un partido con goles negativos
+INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante) 
+VALUES (1, 'Liga111', TO_DATE('2025-02-01', 'YYYY-MM-DD'), 'Equipo111', 'Equipo222', -3, 1);
 
-INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante)
-VALUES (2, 1, TO_DATE('2024-04-16', 'YYYY-MM-DD'), 'Equipo A', 'Equipo B', -2, 0);
-
-INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante)
-VALUES (1, '1234567890', 'ABC123', 'Equipo A', 2, 1, 0, 60.5, -39.5);
+-- Intento de insertar estadísticas con referencias a un jugador que no existe
+INSERT INTO Estadisticas (partidoCodigo, jugadorNit, jugadorTid, equipo, asistencias, tarjetasAmarillas, tarjetasRojas, posesionLocal, posesionVisitante) 
+VALUES (1, 'Nit_inexistente','C.C', 'Equipo11', 1, 1, 0,39.5,60.5);
