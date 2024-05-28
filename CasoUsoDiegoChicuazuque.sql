@@ -29,3 +29,6 @@ select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TR
 --una vez esto sucede, un usuario se registra en la aplicacion(hipoteticamente) y quiere ver como va su equipo en la liga en la que esta jugando
 --5. El usuario quiere ver como va su equipo en la liga
 GRANT USUARIOS TO bd1000095494;
+
+-6. El usuiaro quiere ver como va su equipo en la liga
+select * from bd1000021973.clasificacionequipos where liganombre='liga 1' and TRUNC(ligafecha) = TO_DATE('2025-01-01', 'YYYY-MM-DD');

@@ -77,7 +77,9 @@ SELECT
     C.puntos,
     C.partidosGanados,
     C.partidosEmpatados,
-    C.partidosPerdidos  
+    C.partidosPerdidos,
+    C.ligaNombre,
+    C.ligaFecha  
 FROM Clasificacion C
 ORDER BY C.puesto;
 
