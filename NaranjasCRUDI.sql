@@ -13,7 +13,6 @@
 -- Crear el cuerpo del paquete
 CREATE OR REPLACE PACKAGE BODY Usuario_Package AS
 
-    -- Función para validar el formato del correo electrónico
     FUNCTION EsCorreoValido(p_correo VARCHAR2) RETURN BOOLEAN IS
     BEGIN
         RETURN REGEXP_LIKE(p_correo, '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
@@ -25,17 +24,14 @@ CREATE OR REPLACE PACKAGE BODY Usuario_Package AS
         p_fecha_nacimiento DATE
     ) IS
     BEGIN
-        -- Validar el formato del correo electrónico
         IF NOT EsCorreoValido(p_correo) THEN
             RAISE_APPLICATION_ERROR(-20001, 'El correo electrónico proporcionado no es válido.');
         END IF;
 
-        -- Validar la edad
         IF p_fecha_nacimiento >= ADD_MONTHS(SYSDATE, -16 * 12) THEN
             RAISE_APPLICATION_ERROR(-20002, 'Debe ser mayor de 16 años para registrarse.');
         END IF;
 
-        -- Insertar el usuario en la tabla Sesion
         INSERT INTO Sesion (correo, nombre, fechanacimiento)
         VALUES (p_correo, p_nombre, p_fecha_nacimiento);
     END RegistrarUsuario;
@@ -61,7 +57,6 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
     ) IS
     v_count INTEGER;
     BEGIN
-        -- Verificar si el correo existe en la tabla Sesion
         SELECT COUNT(*)
         INTO v_count
         FROM Sesion
@@ -76,7 +71,6 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
             RAISE_APPLICATION_ERROR(-20002, 'Debe ser mayor de 16 años para registrarse como usuario premium.');
         END IF;
 
-        -- Verificar si el correo ya está registrado como usuario premium
         SELECT COUNT(*)
         INTO v_count
         FROM Pago
@@ -86,7 +80,6 @@ CREATE OR REPLACE PACKAGE BODY UsuarioPremium_Package AS
             RAISE_APPLICATION_ERROR(-20003, 'El correo ya está registrado como usuario premium.');
         END IF;
 
-        -- Insertar el usuario en la tabla Pago
         INSERT INTO Pago (sesion, fechaInicio, fechaFin)
         VALUES (p_correo, CURRENT_DATE, NULL);
     END RegistrarUsuarioPremium;
@@ -113,19 +106,16 @@ CREATE OR REPLACE PACKAGE BODY EstadoSuscripcion_Package AS
         v_fecha_inicio DATE;
         v_fecha_fin DATE;
     BEGIN
-        -- Obtener las fechas de inicio y fin de la suscripción del usuario
         SELECT fechaInicio, fechaFin INTO v_fecha_inicio, v_fecha_fin
         FROM Pago
         WHERE sesion = p_nombre_usuario;
 
-        -- Calcular el estado de la suscripción
         IF SYSDATE BETWEEN v_fecha_inicio AND v_fecha_fin THEN
             o_estado_suscripcion := 'Activa';
         ELSE
             o_estado_suscripcion := 'Inactiva';
         END IF;
 
-        -- Calcular el tiempo que lleva suscrito
         o_tiempo_suscrito := TRUNC(SYSDATE) - TRUNC(v_fecha_inicio);
     END ObtenerEstadoSuscripcion;
 END EstadoSuscripcion_Package;
@@ -200,7 +190,6 @@ END Liga_Package;
 
 
 CREATE OR REPLACE PACKAGE BODY GestionPartidos AS
-    -- Procedimiento para agregar un nuevo partido
     PROCEDURE agregarPartido(
         p_ligaNombre IN VARCHAR2,
         p_ligaFecha IN DATE,
@@ -216,19 +205,16 @@ CREATE OR REPLACE PACKAGE BODY GestionPartidos AS
         v_equipoLocalJugadores INT;
         v_equipoVisitanteJugadores INT;
     BEGIN
-        -- Generar código de partido automáticamente
         SELECT MAX(codigo) + 1 INTO v_codigoPartido FROM Partido;
         IF v_codigoPartido IS NULL THEN
             v_codigoPartido := 1;
         END IF;
 
-        -- Verificar que la liga existe
         SELECT COUNT(*) INTO v_ligaExistente FROM Liga WHERE nombre = p_ligaNombre;
         IF v_ligaExistente = 0 THEN
             RAISE_APPLICATION_ERROR(-20001, 'La liga especificada no existe.');
         END IF;
         
-        -- Verificar que los equipos existen
         SELECT COUNT(*) INTO v_equipoLocalExistente FROM Equipo WHERE nombre = p_equipoLocal;
         IF v_equipoLocalExistente = 0 THEN
             RAISE_APPLICATION_ERROR(-20002, 'El equipo local especificado no existe.');
@@ -239,12 +225,10 @@ CREATE OR REPLACE PACKAGE BODY GestionPartidos AS
             RAISE_APPLICATION_ERROR(-20003, 'El equipo visitante especificado no existe.');
         END IF;
 
-        -- Verificar que los goles sean mayores o iguales a 0
         IF p_golesLocal < 0 OR p_golesVisitante < 0 THEN
             RAISE_APPLICATION_ERROR(-20004, 'Los goles deben ser mayores o iguales a 0.');
         END IF;
 
-        -- Verificar que los equipos tengan al menos 11 jugadores ni mayor a 20
         
         SELECT COUNT(*) INTO v_equipoLocalJugadores FROM equipo WHERE nombre = p_equipoLocal;
         IF v_equipoLocalJugadores < 11 OR v_equipoLocalJugadores > 20 THEN
@@ -256,24 +240,20 @@ CREATE OR REPLACE PACKAGE BODY GestionPartidos AS
             RAISE_APPLICATION_ERROR(-20006, 'El equipo visitante debe tener entre 11 y 20 jugadores.');
         END IF;
 
-        -- Insertar el nuevo partido en la tabla
         INSERT INTO Partido (codigo, ligaNombre, ligaFecha, equipoLocal, equipoVisitante, golesLocal, golesVisitante)
         VALUES (v_codigoPartido, p_ligaNombre, p_ligaFecha, p_equipoLocal, p_equipoVisitante, p_golesLocal, p_golesVisitante);
     END agregarPartido;
 
-    -- Procedimiento para modificar los goles de un partido
     PROCEDURE modificarGoles(
         p_codigo IN INT,
         p_nuevosGolesLocal IN INT,
         p_nuevosGolesVisitante IN INT
     ) AS
     BEGIN
-        -- Verificar que los goles sean mayores o iguales a 0
         IF p_nuevosGolesLocal < 0 OR p_nuevosGolesVisitante < 0 THEN
             RAISE_APPLICATION_ERROR(-20007, 'Los goles deben ser mayores o iguales a 0.');
         END IF;
 
-        -- Actualizar los goles del partido
         UPDATE Partido
         SET golesLocal = p_nuevosGolesLocal,
             golesVisitante = p_nuevosGolesVisitante
@@ -385,7 +365,6 @@ CREATE OR REPLACE PACKAGE BODY CuerpoTecnico_Package AS
     ) IS
         v_count NUMBER;
     BEGIN
-        -- Verificar que el equipo exista
         SELECT COUNT(*)
         INTO v_count
         FROM Equipo
@@ -395,7 +374,6 @@ CREATE OR REPLACE PACKAGE BODY CuerpoTecnico_Package AS
             RAISE_APPLICATION_ERROR(-20001, 'El equipo especificado no existe.');
         END IF;
 
-        -- Insertar el nuevo miembro del cuerpo técnico
         INSERT INTO CuerpoTecnico (nombre, tid, nid, nacionalidad, cargo, equipo)
         VALUES (p_nombre, p_tid, p_nid, p_nacionalidad, p_cargo, p_equipo);
     END RegistrarCuerpoTecnico;
@@ -406,7 +384,6 @@ CREATE OR REPLACE PACKAGE BODY CuerpoTecnico_Package AS
     ) IS
         v_count NUMBER;
     BEGIN
-        -- Verificar que el equipo nuevo exista
         SELECT COUNT(*)
         INTO v_count
         FROM Equipo
@@ -416,7 +393,6 @@ CREATE OR REPLACE PACKAGE BODY CuerpoTecnico_Package AS
             RAISE_APPLICATION_ERROR(-20002, 'El equipo especificado no existe.');
         END IF;
 
-        -- Actualizar el equipo del miembro del cuerpo técnico
         UPDATE CuerpoTecnico
         SET equipo = p_equipo
         WHERE tid = p_tid;
@@ -426,7 +402,6 @@ CREATE OR REPLACE PACKAGE BODY CuerpoTecnico_Package AS
         p_tid IN CHAR
     ) IS
     BEGIN
-        -- Eliminar el miembro del cuerpo técnico
         DELETE FROM CuerpoTecnico
         WHERE tid = p_tid;
     END EliminarCuerpoTecnico;
@@ -454,7 +429,6 @@ CREATE OR REPLACE PACKAGE BODY Jugador_Package AS
     ) IS
         v_count NUMBER;
     BEGIN
-        -- Verificar que el equipo exista
         SELECT COUNT(*)
         INTO v_count
         FROM Equipo
@@ -464,11 +438,9 @@ CREATE OR REPLACE PACKAGE BODY Jugador_Package AS
             RAISE_APPLICATION_ERROR(-20002, 'El equipo especificado no existe.');
         END IF;
 
-        -- Insertar el nuevo jugador
         INSERT INTO Jugador (nombre, nit, tid, nacionalidad, edad, altura, posicion)
         VALUES (p_nombre, p_nit, p_tid, p_nacionalidad, p_edad, p_altura, p_posicion);
 
-        -- Insertar en la tabla Pertenece
         INSERT INTO Pertenece (jugadorNit, jugadorTid, equipo)
         VALUES (p_nit, p_tid, p_equipo); 
     END RegistrarJugador;
@@ -480,7 +452,6 @@ CREATE OR REPLACE PACKAGE BODY Jugador_Package AS
     ) IS
         v_count NUMBER;
     BEGIN
-        -- Verificar que el equipo exista
         SELECT COUNT(*)
         INTO v_count
         FROM Equipo
@@ -490,7 +461,6 @@ CREATE OR REPLACE PACKAGE BODY Jugador_Package AS
             RAISE_APPLICATION_ERROR(-20002, 'El equipo especificado no existe.');
         END IF;
 
-        -- Actualizar el equipo del jugador en la tabla Pertenece
         UPDATE Pertenece
         SET equipo = p_equipo
         WHERE jugadorNit = p_nit AND jugadorTid = p_tid;
@@ -520,27 +490,22 @@ PROCEDURE CalcularPromedioSuscripciones IS
     v_total_suscripciones NUMBER;
     v_promedio_suscripciones NUMBER;
 BEGIN
-    -- Abrir un cursor para obtener el total de suscripciones por mes
     FOR mes_cursor IN (SELECT TO_CHAR(fechaInicio, 'MM-YYYY') AS mes_anio,
                               COUNT(*) AS total_suscripciones
                        FROM Pago
                        GROUP BY TO_CHAR(fechaInicio, 'MM-YYYY')
                        ORDER BY TO_DATE(TO_CHAR(fechaInicio, 'MM-YYYY'), 'MM-YYYY')) LOOP
-        -- Obtener los valores del cursor
         v_mes_anio := mes_cursor.mes_anio;
         v_total_suscripciones := mes_cursor.total_suscripciones;
 
-        -- Calcular el promedio de suscripciones por mes
         SELECT AVG(total_suscripciones) INTO v_promedio_suscripciones
         FROM (SELECT COUNT(*) AS total_suscripciones
               FROM Pago
               GROUP BY TO_CHAR(fechaInicio, 'MM-YYYY'));
 
-        -- Imprimir el resultado
         DBMS_OUTPUT.PUT_LINE('Mes y año: ' || v_mes_anio || ', Total de suscripciones: ' || v_total_suscripciones);
     END LOOP;
 
-    -- Imprimir el promedio de suscripciones por mes
     DBMS_OUTPUT.PUT_LINE('Promedio de suscripciones por mes: ' || v_promedio_suscripciones);
 END CalcularPromedioSuscripciones;
 END PromedioSuscripciones_Package;
@@ -561,7 +526,6 @@ END PromedioSuscripciones_Package;
 --paquete para Consultas el promedio de su equipo durante una temporada--
 
 CREATE OR REPLACE PACKAGE BODY DesempeñoEquipo_Package AS
-    -- Implementar el procedimiento para obtener el desempeño del equipo en una temporada
     PROCEDURE ObtenerDesempeñoEquipo(
         p_nombre_equipo VARCHAR2,
         p_temporada_inicio DATE,
